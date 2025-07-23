@@ -1,0 +1,31 @@
+﻿@model List<LeaveApp.Models.LeaveApplication>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Approve Applications</h2>
+<table class="table table-striped">
+    <thead>
+        <tr><th>Employee</th><th>Reason</th><th>From</th><th>To</th><th>Status</th><th>Action</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Username</td>
+                <td>@item.Reason</td>
+                <td>@item.FromDate.ToShortDateString()</td>
+                <td>@item.ToDate.ToShortDateString()</td>
+                <td>@item.Status</td>
+                <td>
+                    @using (Html.BeginForm("Approve", "Leave"))
+                    {
+                        @Html.Hidden("id", item.LeaveId)
+                        <input type="submit" name="decision" value="Approve" class="btn btn-success" />
+                        <input type="submit" name="decision" value="Reject" class="btn btn-danger" />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,28 @@
+﻿@model List<LeaveApp.Models.LeaveApplication>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Applications</h2>
+<table id="leaveTable" class="table table-bordered">
+    <thead>
+        <tr><th>Reason</th><th>From</th><th>To</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Reason</td>
+                <td>@item.FromDate.ToShortDateString()</td>
+                <td>@item.ToDate.ToShortDateString()</td>
+                <td>@item.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function () {
+        $('#leaveTable').DataTable();
+    });
+</script>
