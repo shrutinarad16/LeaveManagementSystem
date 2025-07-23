@@ -121,9 +121,10 @@ git clone https://github.com/yourusername/LeaveManagementSystem.git
 
 💌 Connect with me:
 
-LinkedIn
-
-Email: shrutin2002@gmail.com
+🚀 **Author**: Shruti Narad  
+📧 **Email**: shrutinarad06@gmail.com  
+🌐 **LinkedIn**: [linkedin.com/in/shrutinarad16](https://linkedin.com/in/shrutinarad16)  
+📍 **Location**: Noida, Uttar Pradesh, India  
 
 ## 🎯 HR Note
 Dear Hiring Manager/HR,
